@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
    <>
-   <section>
+   <section className="bg-slate-300">
    <h1>
     neeshu kumar
    </h1>
