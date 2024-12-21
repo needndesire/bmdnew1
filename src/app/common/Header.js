@@ -24,7 +24,7 @@ export default function Header() {
             <div className='rounded-md p-2 bg-[black] text-white'>  <button>Login In</button></div>
                   
         </li>
-        <li className='md:hidden flex gap-[50px]'>
+        <li className='md:hidden flex gap-[50px] text-[black]'>
         <CiSearch />
 
         <RiMenuFill />
