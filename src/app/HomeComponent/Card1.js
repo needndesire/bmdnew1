@@ -6,9 +6,9 @@ export default function Card1() {
   
         return (
         <>
-            <section className='bg-white text-black '>
+            <section className='bg-white text-black mt-2'>
                 <div className='container m-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 p-1'>
-                <div className='h-[275px]  md:h-[300px] lg:h-[350px] shadow-md rounded-[4px]'>
+                <div className='h-[275px]  md:h-[300px] lg:h-[350px] shadow-sm rounded-[4px]'>
                         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUJefeY1mcZ17Uyy9NmcAd5vhuMTCrD7n_Q&s' className='h-[55%] w-full rounded-[4px]' />
                         <h2 className='text-[20px] font-[700] px-1'>Healers Hospital 
                         </h2>
