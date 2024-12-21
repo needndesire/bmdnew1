@@ -5,14 +5,14 @@ import { CiSearch } from "react-icons/ci";
 import Link from 'next/link';
 
 export default function Header() {
-    let[menu,setmenu]=useState(false)
+    let [menu, setmenu] = useState(false)
     return (
         <>
-            <section className={`h-[100vh] w-[100%] bg-[rgba(0,0,0,.5)] fixed z-[9999] ${menu?`translate-x-[0%]`:`translate-x-[-100%]`}`}>
-                <p className='absolute text-2xl border rounded-lg px-2 right-0 m-5' onClick={()=>setmenu(!menu)}>&times;</p>
+            <section className={`h-[100vh] w-[100%] bg-[rgba(0,0,0,.5)] fixed z-[9999] ${menu ? `translate-x-[0%]` : `translate-x-[-100%]`}`}>
+                <p className='absolute text-2xl border rounded-lg px-2 right-0 m-5' onClick={() => setmenu(!menu)}>&times;</p>
                 <div className=' grid grid-cols-[60%_auto] border'>
                     <div>
-                        1
+                        
                     </div>
                     <div className='pt-[50px] flex flex-col gap-1 px-5 h-[100vh] bg-[white]'>
                         <div className='text-[#474646] p-2'><button>Sign In</button></div>
@@ -20,12 +20,13 @@ export default function Header() {
                     </div>
                 </div>
             </section>
-            <header className='font-sans border-b-[1px] sticky top-0 bg-[#fffefe] shadow-lg'>
+            <header className='font-sans border-b-[1px] sticky top-0 bg[#fffefe] shadow-lg'>
                 <ul className='container m-auto flex justify-between items-center py-2 px-1'>
                     <Link href='/'><li className='flex items-center gap-1 cursor-pointer'>
                         <img src='https://clipart-library.com/image_gallery/n1163695.jpg' className='h-[50px] rounded-lg' />
                         <p className='uppercase font-[700] text-[#666464]'>book my doctor</p>
-                    </li></Link>
+                    </li>
+                    </Link>
                     <li className='md:hidden'>
 
                     </li>
@@ -41,7 +42,7 @@ export default function Header() {
                     <li className='md:hidden flex gap-[50px] text-[black]'>
                         <CiSearch />
 
-                        <RiMenuFill onClick={()=>setmenu(!menu)}/>
+                        <RiMenuFill onClick={() => setmenu(!menu)} />
 
                     </li>
                 </ul>
