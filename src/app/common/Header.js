@@ -1,37 +1,50 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { RiMenuFill } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 
 export default function Header() {
-  return (
-   <>
-   <header className='font-sans border-b-[1px] bg-[#fffefe] shadow-lg'>
-    <ul className='container m-auto flex justify-between items-center py-2 px-1'>
-        <li className='flex items-center gap-1 '>
-            <img src='https://clipart-library.com/image_gallery/n1163695.jpg' className='h-[50px] rounded-lg'/>
-            <p className='uppercase font-[700] text-[#666464]'>book my doctor</p>
-        </li>
-        <li className='md:hidden'>
-       
-        </li>
-        <li className=' w-[50%] h-[40px] hidden md:block relative'>
-            <input type='text' className='border rounded-md w-[100%] h-[100%] placeholder:ps-2' placeholder='Search...' />
-            <CiSearch className='absolute top-3 left-[90%]'/>
-        </li>
-        <li className='md:flex  justify-center items-center gap-4 text-[16px] hidden '>
-            <div className='text-[#474646]'><button>Sign In</button></div>
-            <div className='rounded-md p-2 bg-[black] text-white'>  <button>Login In</button></div>
-                  
-        </li>
-        <li className='md:hidden flex gap-[50px] text-[black]'>
-        <CiSearch />
+    let[menu,setmenu]=useState(false)
+    return (
+        <>
+            <section className={`h-[100vh] w-[100%] bg-[rgba(0,0,0,.5)] fixed z-[9999] ${menu?`translate-x-[0%]`:`translate-x-[-100%]`}`}>
+                <p className='absolute text-2xl border rounded-lg px-2 right-0 m-5' onClick={()=>setmenu(!menu)}>&times;</p>
+                <div className=' grid grid-cols-[60%_auto] border'>
+                    <div>
+                        1
+                    </div>
+                    <div className='pt-[50px] flex flex-col gap-1 px-5 h-[100vh] bg-[white]'>
+                        <div className='text-[#474646] p-2'><button>Sign In</button></div>
+                        <div className='rounded-md p-2 bg-[black] text-white'>  <button>Login In</button></div>
+                    </div>
+                </div>
+            </section>
+            <header className='font-sans border-b-[1px] bg-[#fffefe] shadow-lg'>
+                <ul className='container m-auto flex justify-between items-center py-2 px-1'>
+                    <li className='flex items-center gap-1 '>
+                        <img src='https://clipart-library.com/image_gallery/n1163695.jpg' className='h-[50px] rounded-lg' />
+                        <p className='uppercase font-[700] text-[#666464]'>book my doctor</p>
+                    </li>
+                    <li className='md:hidden'>
 
-        <RiMenuFill />
+                    </li>
+                    <li className=' w-[50%] h-[40px] hidden md:block relative'>
+                        <input type='text' className='border rounded-md w-[100%] h-[100%] placeholder:ps-2' placeholder='Search...' />
+                        <CiSearch className='absolute top-3 left-[90%]' />
+                    </li>
+                    <li className='md:flex  justify-center items-center gap-4 text-[16px] hidden '>
+                        <div className='text-[#474646]'><button>Sign In</button></div>
+                        <div className='rounded-md p-2 bg-[black] text-white'>  <button>Login In</button></div>
 
-        </li>
-    </ul>
-   </header>
-   </>
-  )
+                    </li>
+                    <li className='md:hidden flex gap-[50px] text-[black]'>
+                        <CiSearch />
+
+                        <RiMenuFill onClick={()=>setmenu(!menu)}/>
+
+                    </li>
+                </ul>
+            </header>
+        </>
+    )
 }
