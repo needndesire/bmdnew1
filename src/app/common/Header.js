@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { RiMenuFill } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
+import Link from 'next/link';
 
 export default function Header() {
     let[menu,setmenu]=useState(false)
@@ -21,10 +22,10 @@ export default function Header() {
             </section>
             <header className='font-sans border-b-[1px] sticky top-0 bg-[#fffefe] shadow-lg'>
                 <ul className='container m-auto flex justify-between items-center py-2 px-1'>
-                    <li className='flex items-center gap-1 '>
+                    <Link href='/'><li className='flex items-center gap-1 cursor-pointer'>
                         <img src='https://clipart-library.com/image_gallery/n1163695.jpg' className='h-[50px] rounded-lg' />
                         <p className='uppercase font-[700] text-[#666464]'>book my doctor</p>
-                    </li>
+                    </li></Link>
                     <li className='md:hidden'>
 
                     </li>
