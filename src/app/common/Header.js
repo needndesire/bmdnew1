@@ -19,7 +19,7 @@ export default function Header() {
                     </div>
                 </div>
             </section>
-            <header className='font-sans border-b-[1px] bg-[#fffefe] shadow-lg'>
+            <header className='font-sans border-b-[1px] sticky top-0 bg-[#fffefe] shadow-lg'>
                 <ul className='container m-auto flex justify-between items-center py-2 px-1'>
                     <li className='flex items-center gap-1 '>
                         <img src='https://clipart-library.com/image_gallery/n1163695.jpg' className='h-[50px] rounded-lg' />
