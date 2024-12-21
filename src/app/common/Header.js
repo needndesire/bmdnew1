@@ -6,11 +6,11 @@ import { CiSearch } from "react-icons/ci";
 export default function Header() {
   return (
    <>
-   <header className='font-sans border-b-[1px] shadow-sm'>
+   <header className='font-sans border-b-[1px] bg-[#fffefe] shadow-sm'>
     <ul className='container m-auto flex justify-between items-center py-2 '>
         <li className='flex items-center gap-1 '>
             <img src='https://clipart-library.com/image_gallery/n1163695.jpg' className='h-[50px] rounded-lg'/>
-            <p className='uppercase font-[700] text-[#575454]'>book my doctor</p>
+            <p className='uppercase font-[700] text-[#666464]'>book my doctor</p>
         </li>
         <li className='md:hidden'>
        
