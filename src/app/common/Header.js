@@ -58,7 +58,7 @@ export default function Header() {
 
                     </div>
                     {/* bg and text color not taking */}
-                    <p className=' bg-[#d42828] text-4xl text-center w-[20%] text-[#ee2d2d]' onClick={()=>setsearch(!search)}>&times;</p>
+                    <p className='  text-4xl text-center w-[15%] text-[#555050]' onClick={()=>setsearch(!search)}>&times;</p>
                 </div>
             </header>
         </>
