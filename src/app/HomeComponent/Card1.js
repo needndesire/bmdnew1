@@ -12,11 +12,11 @@ export default function Card1() {
                         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUJefeY1mcZ17Uyy9NmcAd5vhuMTCrD7n_Q&s' className='h-[55%] w-full rounded-[4px]' />
                         <h2 className='text-[20px] font-[700] px-1'>Healers Hospital 
                         </h2>
-                        <p className='px-1 text-[10px] lg:text-[15px] md:text-[13px]'>
-                        is a leading multispecialty hospital located in Bijnor. Renowned for its exceptional patient-centered care
+                        <p className='px-1 overflow-hidden text-[10px] text-[#5c5b5b] lg:text-[15px] md:text-[13px]'>
+                        is aa leading multispecialty hospital located in Bijnor. Renowned for its exceptional patient-centered care
                         </p>
                         <Link href='/Hospitaldetail'>
-                         <button type='submit' className='border block m-auto text-[16px] lg:text-[18px]  bg-[#aebbf1] text-white rounded-md lg:h-[40px] h-[25px] sm:h-[30px] mt-2 w-[70%] sm:w-[65%]' >SEE MORE </button></Link>
+                         <button type='submit' className='border block m-auto text-[15px] lg:text-[16px]  bg-[#0a0a0a] font-[600] text-white rounded-md lg:h-[40px] h-[25px] sm:h-[30px] mt-2 w-[95%] sm:w-[95%]' >See More </button></Link>
                       
                      
                     </div>

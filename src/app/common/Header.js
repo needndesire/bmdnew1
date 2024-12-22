@@ -51,7 +51,7 @@ export default function Header() {
 
 
                 </ul>
-                <div className={`h-[50px] gap-1 justify-center items-center ${search ? `flex` : `hidden`}`}>
+                <div className={`h-[50px] gap-1 justify-center md:hidden items-center ${search ? `flex` : `hidden`}`}>
                     <div className=' w-[80%] h-[40px] relative'>
                         <input type='text' className='border rounded-md w-[100%] h-[100%] placeholder:ps-2' placeholder='Search...' />
                         <CiSearch className='absolute top-3 left-[90%]'  />
