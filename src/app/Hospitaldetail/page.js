@@ -51,7 +51,7 @@ export default function page() {
                         </p>
 
                       
-                        <Link href='/form'>
+                        <Link href='/From'>
                          <button type='submit' className=' border block lg:mt-[10px] m-auto text-[12px] lg:text-[14px]  bg-[#2c4cdb] text-white rounded-md lg:h-[30px] sm:h-[35px] h-[35px]  w-[95%] sm:w-[65%]   '>Take Your Appointment</button></Link>
                       
                      
