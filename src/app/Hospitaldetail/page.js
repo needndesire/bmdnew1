@@ -39,7 +39,7 @@ export default function page() {
             <ul className='container m-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 p-1'>
                
                 <li>
-                <div className='h-[200px]  md:h-[250px] text-black border bg-[#f5f3f3] border-[#c7c7f0] rounded-[4px]'>
+                <div className='h-[200px]  md:h-[250px] text-black border  border-[#c7c7f0] rounded-[4px]'>
                 <div className='pt-[10px] '><FaUserMd className='text-center text-red-700 m-auto text-5xl'/></div>
                         <h2 className='text-[20px] font-[700] px-1 pt-[15px]'>
                             Dr. Neeshu Kumar 
@@ -52,7 +52,7 @@ export default function page() {
 
                       
                         <Link href='/From'>
-                         <button type='submit' className=' border block lg:mt-[10px] m-auto text-[12px] lg:text-[14px]  bg-[#2c4cdb] text-white rounded-md lg:h-[30px] sm:h-[35px] h-[35px]  w-[95%] sm:w-[65%]   '>Take Your Appointment</button></Link>
+                         <button type='submit' className=' border block lg:mt-[10px] m-auto text-[12px] lg:text-[14px]  text-[#6d6868] font-[600] rounded-md lg:h-[30px] sm:h-[35px] h-[35px]  w-[95%] sm:w-[65%]   '>Take Your Appointment</button></Link>
                       
                      
                     </div>
