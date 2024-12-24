@@ -28,7 +28,7 @@ export default function Card1() {
                         is a leading multispecialty hospital located in Bijnor. Renowned for its exceptional patient-centered care
                         </p>
                         <Link href='/Hospitaldetail'>
-                         <button type='submit' className='border block m-auto text-[16px] lg:text-[18px]  bg-[#2c4cdb] text-white rounded-md lg:h-[40px] h-[25px] sm:h-[30px] mt-2 w-[70%] sm:w-[65%]' >SEE MORE </button></Link>
+                         <button type='submit' className='border-2 px-6 py-2 mt-1 rounded-lg text-[#636161] block m-auto text-[16px] lg:text-[18px] [65%]' >See More </button></Link>
                       
                      
                     </div>
