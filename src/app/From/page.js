@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
-import { getDatabase } from "firebase/database";
-import { app } from '../Firebaseconfig/Firebaseconfig';
+// import { getDatabase } from "firebase/database";
+// import { app } from '../Firebaseconfig/Firebaseconfig';
 export default function page() {
-  const database = getDatabase(app);
+  // const database = getDatabase(app);
   return (
     <>
       <section className='p-4'>
