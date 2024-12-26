@@ -3,13 +3,17 @@ import React, { useState } from 'react'
 import { RiMenuFill } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 import Link from 'next/link';
+import Model from '../Model/Model';
 
 export default function Header() {
     let [menu, setmenu] = useState(false)
     let [search, setsearch] = useState(false)
-    console.log('search Value',search)
+    let[showmodel,setshowModel]=useState(false)
+    // console.log('search Value',search)
     return (
         <>
+        {showmodel && <Model setshowModel={setshowModel}/>  }
+        {/* start side menu */}
             <section className={`h-[100vh] w-[100%] bg-[rgba(0,0,0,.5)] fixed z-[9999] ${menu ? `translate-x-[0%]` : `translate-x-[-100%]`}`}>
                 <p className='absolute text-2xl border rounded-lg px-2 right-0 m-5' onClick={() => setmenu(!menu)}>&times;</p>
                 <div className=' grid grid-cols-[50%_auto] border'>
@@ -18,7 +22,7 @@ export default function Header() {
                     </div>
                     <div className='pt-[50px] flex flex-col gap-1 px-5 h-[100vh] bg-[white]'>
                         <div className='text-[#474646] p-2'><button>Sign In</button></div>
-                        <div className='rounded-md p-2 bg-[black] text-white'>  <button>Login In</button></div>
+                        <div className='rounded-md p-2 bg-[black] text-white' onClick={()=>{setshowModel(true) ,setmenu(!menu)}}>  <button>Login In</button></div>
                     </div>
                 </div>
             </section>
@@ -38,7 +42,7 @@ export default function Header() {
                     </li>
                     <li className='md:flex  justify-center items-center gap-4 text-[16px] hidden '>
                         <div className='text-[#474646]'><button>Sign In</button></div>
-                        <div className='rounded-md p-2 bg-[black] text-white'>  <button>Login In</button></div>
+                        <div className='rounded-md p-2 bg-[black] text-white' >  <button>Login In</button></div>
 
                     </li>
                     <li className='md:hidden flex gap-[50px] text-[black]'>
