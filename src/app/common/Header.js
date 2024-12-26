@@ -15,7 +15,7 @@ export default function Header() {
         {showmodel && <Model setshowModel={setshowModel}/>  }
         {/* start side menu */}
             <section className={`h-[100vh] w-[100%] bg-[rgba(0,0,0,.5)] fixed z-[9999] ${menu ? `translate-x-[0%]` : `translate-x-[-100%]`}`}>
-                <p className='absolute text-2xl border rounded-lg px-2 right-0 m-5' onClick={() => setmenu(!menu)}>&times;</p>
+                <p className='absolute text-2xl border-2 border-[black] text-black rounded-lg px-2 right-0 m-5' onClick={() => setmenu(!menu)}>&times;</p>
                 <div className=' grid grid-cols-[50%_auto] border'>
                     <div>
 
