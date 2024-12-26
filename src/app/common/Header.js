@@ -20,7 +20,7 @@ export default function Header() {
                     <div>
 
                     </div>
-                    <div className='pt-[50px] flex flex-col gap-1 px-5 h-[100vh] bg-[white]'>
+                    <div className='pt-[50px] flex flex-col gap-1 px-5 h-[100vh] rounded-lg shadow-xl bg-[#b1aeae]'>
                         <div className='text-[#474646] p-2'><button>Sign In</button></div>
                         <div className='rounded-md p-2 bg-[black] text-white' onClick={()=>{setshowModel(true) ,setmenu(!menu)}}>  <button>Login In</button></div>
                     </div>
