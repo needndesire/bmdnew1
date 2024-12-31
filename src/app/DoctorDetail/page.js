@@ -2,6 +2,12 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>Doctor details is here</div>
+    <>
+    <section>
+      <div className='p-5'>
+        find doctor detail
+      </div>
+    </section>
+    </>
   )
 }
