@@ -1,14 +1,33 @@
 'use client'
 import React from 'react'
+import { useRouter } from 'next/navigation';
+import Swal from 'sweetalert2';
+
 // import { getDatabase } from "firebase/database";
 // import { app } from '../Firebaseconfig/Firebaseconfig';
 export default function page() {
   // const database = getDatabase(app);
+  let route=useRouter()
+  let saveData=(e)=>{
+    e.preventDefault();
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: `Your token  no 1`,
+      showConfirmButton: false,
+      timer: 1000
+    });
+  
+    route.push('/DoctorDetail'); // Use redirect to navigate to the doctor page
+
+  }
+
+
   return (
     <>
       <section className='p-4'>
 
-        <form>
+        <form onSubmit={saveData}>
           <div className="grid gap-6 mb-6 md:grid-cols-2">
             <div>
               <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Patiant name</label>
