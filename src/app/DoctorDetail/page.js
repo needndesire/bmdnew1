@@ -6,7 +6,7 @@ export default function page() {
     <section>
       <div className='p-5'>
         find doctor detail
-        hi,this is Neeshu Kumar
+        hi,this is Neeshu Kumar rrrrr
       </div>
     </section>
     </>
