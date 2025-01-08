@@ -1,12 +1,14 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
+import HaveDoctorPaper from './HaveDoctorPaper';
 
 // import { getDatabase } from "firebase/database";
 // import { app } from '../Firebaseconfig/Firebaseconfig';
 export default function page() {
   // const database = getDatabase(app);
+  let [haveDoctorPaper,sethaveDoctorPaper]=useState(false)
   let route=useRouter()
   let saveData=(e)=>{
     e.preventDefault();
@@ -26,7 +28,10 @@ export default function page() {
   return (
     <>
       <section className='p-4'>
-
+      <div className='text-[13px] bg-[green] px-2 py-2'>
+        if you are already have a Doctor paper <button className='border px-2 text-[green] rounded-lg ms-2 bg-[#f5f2f2] py-1' onClick={()=>sethaveDoctorPaper(true)}> click hear </button>
+        </div>
+       {haveDoctorPaper && <HaveDoctorPaper setHaveDoctorPaper={sethaveDoctorPaper}/>}
         <form onSubmit={saveData}>
           <div className="grid gap-6 mb-6 md:grid-cols-2">
             <div>
