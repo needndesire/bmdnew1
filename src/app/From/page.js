@@ -6,7 +6,7 @@ import HaveDoctorPaper from './HaveDoctorPaper';
 
 // import { getDatabase } from "firebase/database";
 // import { app } from '../Firebaseconfig/Firebaseconfig';
-export default function page() {
+export default function Page() {
   // const database = getDatabase(app);
   let [haveDoctorPaper,sethaveDoctorPaper]=useState(false)
   let route=useRouter()
