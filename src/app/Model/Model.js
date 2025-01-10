@@ -24,7 +24,7 @@ export default function Model({ setshowModel }) {
         //         console.log(token,user)
 
         //     })
-        console.log("neeshu")
+        console.log("neeshu kumar")
     }
     return (
         <>
