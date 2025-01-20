@@ -3,16 +3,39 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
 import HaveDoctorPaper from './HaveDoctorPaper';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { app } from '../Firebaseconfig/Firebaseconfig';
 
-// import { getDatabase } from "firebase/database";
-// import { app } from '../Firebaseconfig/Firebaseconfig';
 export default function Page() {
-  // const database = getDatabase(app);
+  const provider = new GoogleAuthProvider();
+  const auth = getAuth(app);
   let [haveDoctorPaper,sethaveDoctorPaper]=useState(false)
   let route=useRouter()
   let saveData=(e)=>{
+    signInWithPopup(auth, provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      // IdP data available using getAdditionalUserInfo(result)
+      // ...
+      console.log(token,user)
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
+  
     e.preventDefault();
     Swal.fire({
+
       position: "top-end",
       icon: "success",
       title: `Your token  no 1`,
