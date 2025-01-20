@@ -4,7 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 
 
-export default function Model() { 
+export default function Model({setshowModel}) { 
 
     return (
         <>
