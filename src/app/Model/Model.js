@@ -2,30 +2,10 @@ import React, { useState } from 'react'
 import { AiOutlineGooglePlus } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
-// import { GoogleAuthProvider } from "firebase/auth";
-const provider = new GoogleAuthProvider();
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { app } from '../Firebaseconfig/Firebaseconfig';
 
-export default function Model({ setshowModel }) {
 
-    
-    let googleLogin = () => {
-        const auth = getAuth(app);
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                // This gives you a Google Access Token. You can use it to access the Google API.
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
-                // The signed-in user info.
-                const user = result.user;
-                // IdP data available using getAdditionalUserInfo(result)
-                // ...
-                console.log(token,user)
+export default function Model() { 
 
-            })
-        console.log("neeshu kumar")
-    }
     return (
         <>
             <section>
@@ -48,7 +28,7 @@ export default function Model({ setshowModel }) {
                         <h2 className='text-black py-5 text-2xl'>or</h2>
                         <div className='flex justify-center items-center border-2 py-3 px-5 w-[80%] lg:w-[52%] m-auto rounded-lg lg:gap-5 gap-1 '>
                             <AiOutlineGooglePlus className='text-3xl text-green-800' />
-                            <button className='text-black' onClick={googleLogin}>
+                            <button className='text-black' >
                                 Google Login</button>
                         </div>
                         <div className='mt-5 flex justify-center items-center border-2 py-3 px-5 w-[80%] lg:w-[52%] m-auto rounded-lg lg:gap-5 gap-1 '>

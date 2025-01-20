@@ -29,7 +29,7 @@ export default function Page() {
     <>
       <section className='p-4'>
       <div className='text-[13px] bg-[green] px-2 py-2'>
-        If you are already have a Doctor paper <button className='border px-2 text-[green] rounded-lg ms-2 bg-[#f5f2f2] py-1' onClick={()=>sethaveDoctorPaper(true)}> click hear </button>
+      <span className='text-white'> If you are already have a Doctor paper</span> <button className='border px-2 text-[green] rounded-lg ms-2 bg-[#f5f2f2] py-1' onClick={()=>sethaveDoctorPaper(true)}> click hear </button>
         </div>
        {haveDoctorPaper && <HaveDoctorPaper setHaveDoctorPaper={sethaveDoctorPaper}/>}
         <form onSubmit={saveData}>
